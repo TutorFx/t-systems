@@ -16,9 +16,11 @@ const route = useRoute();
 let { pending, data: account } = useLazyAsyncData('account', () => $fetch(`https://api.github.com/users/${route.params.user}`))
 const refresh = () => refreshNuxtData('account')
 refresh({ dedupe: true })
-</script>
-<script>
-export default{
-
-}
+watch(account, (newData) => {
+    // Because count starts out null, you won't have access
+    // to its contents immediately, but you can watch it.
+    useHead({
+        meta: [{ hid: 'og:image', property: 'og:image', content: `https://og-image.vercel.app/**${encodeURI(route.params.user)}**.png?theme=light&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg&images=${encodeURI(newData.avatar_url)}.png` }]
+    })
+})
 </script>
