@@ -7,7 +7,7 @@ the purpose of this project is to test my knowledge of vuejs
 - [x] Tailwind CSS v3 (Windi.css)
 - [x] Images Rescaled with @nuxt/image-edge
 - [x] Atomic Design
-- [ ] OG Vercel to Edge Thumbnails
+- [x] OG Vercel to Edge Thumbnails
 
 ## Setup
 
