@@ -3,6 +3,12 @@
 This is a small Vue application made with NUXT3, Tailwind CSS v3.0 and Vercel's edge functions.<br>
 the purpose of this project is to test my knowledge of vuejs
 
+- [x] Mobile First
+- [x] Tailwind CSS v3 (Windi.css)
+- [x] Images Rescaled with @nuxt/image-edge
+- [x] Atomic Design
+- [ ] OG Vercel to Edge Thumbnails
+
 ## Setup
 
 Make sure to install the dependencies:
